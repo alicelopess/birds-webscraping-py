@@ -81,11 +81,13 @@ for municipio in lista_municipios:
         nav.execute_script('window.scrollTo(0, document.body.scrollHeight)')
 
         # Espere carregar no scroll
-        if (len(birds_list) > 5000):
-            time.sleep(7)
-        if (len(birds_list) > 3000):
+        if (len(birds_list) > 15000):
+            time.sleep(8)
+        if (len(birds_list) > 9000):
+            time.sleep(6)
+        if (len(birds_list) > 6000):
              time.sleep(5)
-        if (len(birds_list) > 2000):
+        if (len(birds_list) > 3000):
             time.sleep(4)
         else: 
             time.sleep(2)
