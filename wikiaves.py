@@ -45,7 +45,7 @@ url = "https://www.wikiaves.com.br/buscaavancada.php"
 #"Foz do Iguaçu"]
 
 # Lista Teste
-lista_municipios = ["Grossos", "Governador Dix-Sept Rosado"]
+lista_municipios = ["Pau dos Ferros", "Grossos", "Governador Dix-Sept Rosado"]
 
 # 3. Realizar primeira pesquisa
 for municipio in lista_municipios:
@@ -86,7 +86,6 @@ for municipio in lista_municipios:
         time.sleep(4)
 
         # Compare o tamanho da página e redefina a variável
-        last_height = new_height
         new_height = nav.execute_script('return document.body.scrollHeight')
         if new_height == last_height:
             ## Double Check (carregamento lento)
@@ -131,33 +130,55 @@ for municipio in lista_municipios:
         img_src = img.get('src')
 
         # Extrair o link do nome do pássaro
+        ## Verificar se o link do nome do pássaro existe
         content_div = main_div.find('div', class_="m-portlet__body")
         sp_div = content_div.find('div', class_="sp")
-        sp_a = sp_div.find('a', class_="m-link")
-        bird_name_href= sp_a.get('href')
+        if sp_div.find('a', class_="m-link"):
+            sp_a = sp_div.find('a', class_="m-link")
+            bird_name_href= sp_a.get('href')
+        else:
+            bird_name_href= "N/A"
 
         # Extrair nome do pássaro
         # Extrair nome do pássaro - 'en'
-        bird_name_html = sp_div.findAll('a', class_="m-link")
-        bird_name = []
-        for a in bird_name_html:
-            bird_name.append(a.text)
+        ## Verificar se o nome do pássaro existe
+        if sp_div.findAll('a', class_="m-link"):
+            bird_name_html = sp_div.findAll('a', class_="m-link")
+            bird_name = []
+            for a in bird_name_html:
+                bird_name.append(a.text)
+        else:
+            bird_name = ["N/A", "N/A"]
 
         # Extrair nome do Autor
         author_div = content_div.find('div', class_="author")
         bird_author_html = author_div.findAll('a', class_="m-link")
-        bird_author = []
-        for a in bird_author_html:
-            bird_author.append(a.text)
+        ## Verificar se o nome do autor existe
+        if len(bird_author_html) == 1:
+            ### O nome do município sempre vai existir
+            bird_author = [bird_author_html.text, "N/A"]
+        else:
+            bird_author = []
+            for a in bird_author_html:
+                bird_author.append(a.text)
         
         # Extrair link do perfil do autor
         all_bird_author_href = author_div.findAll('a', class_="m-link")
-        bird_author_href = []
-        for a in all_bird_author_href:
-            bird_author_href.append(a.get('href'))
+        ## Verificar se o link do perfil do autor existe
+        if len(all_bird_author_href) == 1:
+            ### O link do nome do município sempre vai existir
+            bird_author_href = [all_bird_author_href.get('href'), "N/A"]
+        else:
+            bird_author_href = []
+            for a in all_bird_author_href:
+                bird_author_href.append(a.get('href'))
 
         # Extrair data do registro
-        bird_date = content_div.find('div', class_="date").text
+        ## Verificar se a data do registro existe
+        if content_div.find('div', class_="date"):
+            bird_date = content_div.find('div', class_="date").text
+        else:
+            bird_date = "N/A"
 
         # Transformar cada registro em um objeto com os dados importantes
         bird_data = {
