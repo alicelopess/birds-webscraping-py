@@ -20,29 +20,32 @@ nav = webdriver.Firefox(options=options)
 
 # 2. Definir variáveis
 url = "https://www.wikiaves.com.br/buscaavancada.php"
-lista_municipios = ["Manaus",
-"Brasília",
-"Boa Vista",
-"Cuiabá",
-"São Paulo",
-"Rio de Janeiro",
-"Belém",
-"Goiânia",
-"Florianópolis",
-"Belo Horizonte",
-"Campinas",
-"Joinville",
-"Santarém",
-"Teresópolis",
-"Cananéia",
-"Ubatuba",
-"Salesópolis",
-"Peruíbe",
-"Chapada dos Guimarães",
-"Ilhéus",
-"Porto Seguro",
-"Angra dos Reis",
-"Foz do Iguaçu"]
+#lista_municipios = ["Santarém",
+#"Cananéia",
+#"Joinville",
+#"Teresópolis",
+#"Manaus",
+#"Brasília",
+#"Boa Vista",
+#"Cuiabá",
+#"São Paulo",
+#"Rio de Janeiro",
+#"Belém",
+#"Goiânia",
+#"Florianópolis",
+#"Belo Horizonte",
+#"Campinas",
+#"Ubatuba",
+#"Salesópolis",
+#"Peruíbe",
+#"Chapada dos Guimarães",
+#"Ilhéus",
+#"Porto Seguro",
+#"Angra dos Reis",
+#"Foz do Iguaçu"]
+
+# Lista Teste
+lista_municipios = ["Grossos", "Governador Dix-Sept Rosado"]
 
 # 3. Realizar primeira pesquisa
 for municipio in lista_municipios:
@@ -72,22 +75,28 @@ for municipio in lista_municipios:
     ### Determine o tamanho inicial da página
     last_height = nav.execute_script('return document.body.scrollHeight')
     print(last_height)
-    
     while True:
         # Scroll até o final da página
         nav.execute_script('window.scrollTo(0, document.body.scrollHeight)')
 
         # Espere carregar
-        time.sleep(2)
+        time.sleep(4)
 
         # Compare o tamanho da página e redefina a variável
         new_height = nav.execute_script('return document.body.scrollHeight')
         if new_height == last_height:
-            break
+            ## Double Check (carregamento lento)
+            time.sleep(10)
+            new_height = nav.execute_script('return document.body.scrollHeight')
+            if new_height == last_height:
+                break
+            else:
+                last_height = new_height
         else:
             last_height = new_height
 
     time.sleep(5)
+    print(last_height)
 
     ## Identificar os dados que eu quero coletar
     dados = nav.find_element(By.XPATH, '//*[@id="wa-record-grid"]')

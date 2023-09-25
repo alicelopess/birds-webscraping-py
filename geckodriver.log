@@ -5631,3 +5631,186 @@ ba.zk/c/<@https://www.googletagmanager.com/gtag/js?id=G-PZCNV1Q1B8:431:412
 
 1695557893470	Marionette	INFO	Stopped listening on port 50351
 Dynamically enable window occlusion 1
+1695561177494	geckodriver	INFO	Listening on 127.0.0.1:51517
+1695561180506	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51518" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Cliente\\AppData\\Local\\Temp\\rust_mozprofilertGyae"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695561182597	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695561183002	Marionette	INFO	Listening on port 51525
+WebDriver BiDi listening on ws://127.0.0.1:51518
+Read port: 51525
+1695561183772	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51518/devtools/browser/4ff43c00-298c-4c7d-9bec-f60ff4702ac6
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.wikiaves.com.br."
+JavaScript warning: https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js, line 1: Script terminated by timeout at:
+n@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:836913
+e.emitEvent@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:821921
+l.layoutPosition@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:828442
+l.ontransitionend@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:830826
+l.handleEvent@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:827462
+
+1695562356493	Marionette	INFO	Stopped listening on port 51525
+Dynamically enable window occlusion 1
+1695562445551	geckodriver	INFO	Listening on 127.0.0.1:52016
+1695562448602	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52017" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Cliente\\AppData\\Local\\Temp\\rust_mozprofileHRF12B"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695562449692	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695562450024	Marionette	INFO	Listening on port 52025
+WebDriver BiDi listening on ws://127.0.0.1:52017
+Read port: 52025
+1695562450699	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52017/devtools/browser/360bc968-4231-45b1-8f1b-389067dfab5e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.wikiaves.com.br."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914, line 266: Script terminated by timeout at:
+Ro@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:266:1832
+sp/<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:273:434
+sl/</<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:210:485
+kd.prototype.m@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:91:282
+m.next@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:71:859
+next@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:104:352
+m.m@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:72:223
+m.next@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:71:859
+ck/c/</</<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:184:320
+Qa@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:43:339
+Na.prototype.flush@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:43:127
+Pa@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:42:330
+ck/c/</<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:184:292
+m.od@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:74:425
+m.next@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:73:439
+m.m@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:72:223
+m.next@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:71:859
+uc/<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:79:1186
+m.td@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:76:34
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:946
+ck/c/<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:184:268
+m.td@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:76:34
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:946
+mf.wg@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:112:1035
+m.Fe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:95:339
+Rd.prototype.execute@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:102:1943
+sd.prototype.flush@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:96:438
+Rd.prototype.A@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:102:1818
+Cc.prototype.A@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:81:300
+mf.prototype.ba@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:112:1103
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:935
+of.prototype.call@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:113:77
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:877
+Hc.prototype.connect@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:82:573
+Fc.prototype.call@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:81:744
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:877
+ck/c/<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:184:268
+m.td@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:76:34
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:946
+Lc.prototype.call@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:84:311
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:877
+jd.prototype.call@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:90:2240
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:877
+ze.prototype.call@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:105:547
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:877
+Lc.prototype.call@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:84:311
+m.subscribe@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:75:877
+np.prototype.start@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:268:228
+vp@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:278:463
+@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:285:653
+Jj/<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:175:1013
+Ma.prototype.La/<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:42:162
+@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:285:662
+@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:285:666
+@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:285:689
+
+JavaScript warning: https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js, line 1: Script terminated by timeout at:
+b@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:823179
+l.getSize@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:827498
+i._getItemLayoutPosition@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:847328
+l._getItemLayoutPosition@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:853095
+d._layoutItems/<@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:835607
+d._layoutItems@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:835576
+d.layoutItems@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:835361
+l._layout@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:850244
+l.layout@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:850139
+i/u.fn[c]/<@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:820777
+each@https://www.wikiaves.com.br/jswa/jquery.min.js:2:2715
+each@https://www.wikiaves.com.br/jswa/jquery.min.js:2:1003
+i/u.fn[c]@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:820691
+addDoneCard@https://www.wikiaves.com.br/jswa/midias.js?1549930958:333:12
+printRecord/<@https://www.wikiaves.com.br/jswa/midias.js?1549930958:466:15
+i@https://www.wikiaves.com.br/jswa/jquery.min.js:2:28017
+fireWith@https://www.wikiaves.com.br/jswa/jquery.min.js:2:28783
+Deferred/</f[b[0]]@https://www.wikiaves.com.br/jswa/jquery.min.js:2:30948
+a.prototype.progress@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:858101
+a.prototype.check/e/<@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:857706
+
+1695563817104	Marionette	INFO	Stopped listening on port 52025
+Dynamically enable window occlusion 1
+1695564370066	geckodriver	INFO	Listening on 127.0.0.1:52878
+1695564373125	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52879" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Cliente\\AppData\\Local\\Temp\\rust_mozprofilepIdlOh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695564374127	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695564374367	Marionette	INFO	Listening on port 52886
+WebDriver BiDi listening on ws://127.0.0.1:52879
+Read port: 52886
+1695564374948	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52879/devtools/browser/88ebfce1-1d7c-4568-869b-3a20ebd45d42
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.wikiaves.com.br."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1695570137257	Marionette	INFO	Stopped listening on port 52886
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-PZCNV1Q1B8, line 431: Script terminated by timeout at:
+get@https://www.googletagmanager.com/gtag/js?id=G-PZCNV1Q1B8:431:115
+stop@https://www.googletagmanager.com/gtag/js?id=G-PZCNV1Q1B8:431:87
+ba.zk/c/<@https://www.googletagmanager.com/gtag/js?id=G-PZCNV1Q1B8:431:412
+
+Dynamically enable window occlusion 1
+1695570140539	geckodriver	INFO	Listening on 127.0.0.1:54261
+1695570143627	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54262" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Cliente\\AppData\\Local\\Temp\\rust_mozprofileEuePsJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695570145385	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695570146650	Marionette	INFO	Listening on port 54277
+WebDriver BiDi listening on ws://127.0.0.1:54262
+Read port: 54277
+1695570147416	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54262/devtools/browser/0239eb10-e96f-4dda-be68-adebec44249f
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.wikiaves.com.br."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript warning: https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js, line 1: Script terminated by timeout at:
+n@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:836913
+e.emitEvent@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:821921
+l.layoutPosition@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:828442
+l.ontransitionend@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:830826
+l.handleEvent@https://www.wikiaves.com.br/m5/dist/default/assets/vendors/base/vendors.bundle.js:1:827462
+
+1695574000482	Marionette	INFO	Stopped listening on port 54277
+Dynamically enable window occlusion 1
+1695609569607	geckodriver	INFO	Listening on 127.0.0.1:62693
+1695609572659	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62694" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Cliente\\AppData\\Local\\Temp\\rust_mozprofileno93RH"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695609574204	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695609574602	Marionette	INFO	Listening on port 62703
+WebDriver BiDi listening on ws://127.0.0.1:62694
+Read port: 62703
+1695609575456	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62694/devtools/browser/584872d2-5822-48d4-8ac9-f5e3546354db
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.wikiaves.com.br."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/tGcDLxZnxcZjneq6ZTfMhLSKmVRaNAcBIKHxIKG0fIc.js line 2 > eval line 294 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/hd6OEElWfwYGZaCPT5eErxVu3EhHI0c6zUCVPrO95VA.js line 2 > eval line 634 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.wikiaves.com.br."
+JavaScript warning: https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914, line 71: Script terminated by timeout at:
+m.next@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:71:842
+nd/</<@https://www.googletagservices.com/activeview/js/current/rx_lidar.js?cache=r20110914:92:671
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
