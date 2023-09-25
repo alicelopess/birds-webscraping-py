@@ -68,7 +68,10 @@ for municipio in lista_municipios:
 
     ## Identificar Botão de buscar e clicar
     nav.find_element(By.XPATH, '//*[@id="buscar"]').click()
-    time.sleep(2)
+    time.sleep(3)
+
+    # Coletar quantidade de registros do municipio
+    quantidade_registros = nav.find_element(By.XPATH, '//*[@id="wa-registros-total"]').text
 
     # 4. Trazer os dados
     ## Scroll até o final da página para garantir que todos os registros serão coletados
@@ -83,6 +86,7 @@ for municipio in lista_municipios:
         time.sleep(4)
 
         # Compare o tamanho da página e redefina a variável
+        last_height = new_height
         new_height = nav.execute_script('return document.body.scrollHeight')
         if new_height == last_height:
             ## Double Check (carregamento lento)
@@ -110,8 +114,6 @@ for municipio in lista_municipios:
 
     ## Encontrar cada registro dentro do HTML da página
     birds = parser_html_dados.find_all('div', class_ = 'wa-grid-item wa-record-mobile')
-    ###NOTA: Birds é uma lista
-    print(len(birds))
 
     # 5. Tratar os dados
     ## Definir uma lista que vai conter dicionários com os dados importantes de cada registro
@@ -188,3 +190,5 @@ for municipio in lista_municipios:
 
     ## Esperar e recomeçar
     time.sleep(2)
+
+    print('✅ [Coleta finalizada] ' + municipio + ' com ' + str(len(birds)) + ' registros.')
