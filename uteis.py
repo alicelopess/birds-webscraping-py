@@ -47,6 +47,7 @@ def search(municipio):
 #Função para Filtrar Pesquisa de Municipios com MUITOS Registros
 def filter_search(ano):
   # Abrir url do site 
+  time.sleep(1)
   nav.get(constants.url_wikiaves)
   time.sleep(2)
 
@@ -77,6 +78,7 @@ def filter_search(ano):
 
   # Enviar Pesquisa
   nav.find_element(By.XPATH, constants.send_btn).click()
+  time.sleep(2)
 
   # Coletar Valor Total de Registros do Municipio por Período de Tempo
   return nav.find_element(By.XPATH, constants.xpath_total_registros).text
@@ -198,7 +200,7 @@ def create_df(birds_list, municipio):
   with open(f'birds{"_".join(municipio.lower().split())}.json', 'w') as outfile:
     outfile.write(json_string)
 
-  time.sleep(3)
+  time.sleep(2)
   ## Transformar JSON em Planilha Excel - Identificar por cidade
   df_json = pd.read_json(f'birds{"_".join(municipio.lower().split())}.json')
   df_json.to_excel(f'birds{"_".join(municipio.lower().split())}.xlsx')

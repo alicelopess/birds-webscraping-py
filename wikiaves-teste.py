@@ -47,9 +47,10 @@ for municipio in constants.municipios:
         ## Iterar pela lista birds para extrair os dados importantes de cada registro
         for bird in birds:
             bird_data = uteis.extract_data(bird)
+            time.sleep(1)
             # Passar cada objeto para a lista 
             birds_list.append(bird_data)
-            time.sleep(2)
+            time.sleep(1)
 
         ## Pesquisar por ano -> Fim do for anos
         print(f'Finalizei esse período de tempo: {ano}\nColetei essa quantidade de registros: {str(len(birds))}')
