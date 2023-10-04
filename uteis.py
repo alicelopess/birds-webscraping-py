@@ -54,7 +54,7 @@ def filter_search(ano):
   nav.find_element(By.XPATH, constants.campo_pesquisa).click()
 
   # Escrever o Nome do Município
-  pyperclip.copy(constants.municipios_teste[0])
+  pyperclip.copy(constants.municipios[0])
   nav.find_element(By.XPATH, constants.input_campo_pesquisa).send_keys(Keys.CONTROL+ 'v')
   time.sleep(2)
 

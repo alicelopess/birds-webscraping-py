@@ -9,7 +9,7 @@ import time
 uteis.open_nav()
 
 # 3 - Realizar Primeira Pesquisa
-for municipio in constants.municipios_teste:
+for municipio in constants.municipios:
     print('=' * 30)
     print(f'Iniciando Coleta de {municipio.upper()}...')
 
