@@ -20,32 +20,32 @@ nav = webdriver.Firefox(options=options)
 
 # 2. Definir variáveis
 url = "https://www.wikiaves.com.br/buscaavancada.php"
-#lista_municipios = ["Santarém",
-#"Cananéia",
-#"Joinville",
-#"Teresópolis",
-#"Manaus",
-#"Brasília",
-#"Boa Vista",
-#"Cuiabá",
-#"São Paulo",
-#"Rio de Janeiro",
-#"Belém",
-#"Goiânia",
-#"Florianópolis",
-#"Belo Horizonte",
-#"Campinas",
-#"Ubatuba",
-#"Salesópolis",
-#"Peruíbe",
-#"Chapada dos Guimarães",
-#"Ilhéus",
-#"Porto Seguro",
-#"Angra dos Reis",
-#"Foz do Iguaçu"]
+lista_municipios = ["Santarém",
+"Cananéia",
+"Joinville",
+"Teresópolis",
+"Manaus",
+"Brasília",
+"Boa Vista",
+"Cuiabá",
+"São Paulo",
+"Rio de Janeiro",
+"Belém",
+"Goiânia",
+"Florianópolis",
+"Belo Horizonte",
+"Campinas",
+"Ubatuba",
+"Salesópolis",
+"Peruíbe",
+"Chapada dos Guimarães",
+"Ilhéus",
+"Porto Seguro",
+"Angra dos Reis",
+"Foz do Iguaçu"]
 
 # Lista Teste
-lista_municipios = ["Pau dos Ferros", "Grossos", "Governador Dix-Sept Rosado"]
+#lista_municipios = ["Pau dos Ferros"]
 
 # 3. Realizar primeira pesquisa
 for municipio in lista_municipios:
@@ -89,16 +89,17 @@ for municipio in lista_municipios:
         new_height = nav.execute_script('return document.body.scrollHeight')
         if new_height == last_height:
             ## Double Check (carregamento lento)
-            time.sleep(10)
+            time.sleep(15)
             new_height = nav.execute_script('return document.body.scrollHeight')
             if new_height == last_height:
                 break
             else:
                 last_height = new_height
+                print(f'Travei em {new_height}')
         else:
             last_height = new_height
 
-    time.sleep(5)
+    time.sleep(3)
     print(last_height)
 
     ## Identificar os dados que eu quero coletar
@@ -125,65 +126,60 @@ for municipio in lista_municipios:
         a = main_div.find('a')
         a_href = a.get('href')
 
-        # Extrair src da imagem do pássaro
+        # Extrair src da imagem do registro
         img = a.find('img')
         img_src = img.get('src')
 
-        # Extrair o link do nome do pássaro
-        ## Verificar se o link do nome do pássaro existe
+        # Definir uma variável para a div de conteúdo
         content_div = main_div.find('div', class_="m-portlet__body")
-        sp_div = content_div.find('div', class_="sp")
-        if sp_div.find('a', class_="m-link"):
+
+        # Extrair informações da espécie
+        ## Extrair o link do nome da espécie
+        ### Verificar se o link do nome da espécie existe
+        try:
+            sp_div = content_div.find('div', class_="sp")
             sp_a = sp_div.find('a', class_="m-link")
             bird_name_href= sp_a.get('href')
-        else:
+        except:
             bird_name_href= "N/A"
 
-        # Extrair nome do pássaro
-        # Extrair nome do pássaro - 'en'
-        ## Verificar se o nome do pássaro existe
-        if sp_div.findAll('a', class_="m-link"):
+        ## Extrair nome da esécie
+        ## Extrair nome da esécie - 'en'
+        ### Verificar se o nome da espécie existe
+        try:
+            sp_div = content_div.find('div', class_="sp")
             bird_name_html = sp_div.findAll('a', class_="m-link")
             bird_name = []
             for a in bird_name_html:
                 bird_name.append(a.text)
-        else:
+        except:
             bird_name = ["N/A", "N/A"]
 
-        # Extrair nome do Autor
+        # Extrair informações do Autor
+        ## Definir uma variável para a div de autor
         author_div = content_div.find('div', class_="author")
+
+        ## Extrair nome do Autor
         bird_author_html = author_div.findAll('a', class_="m-link")
-        ## Verificar se o nome do autor existe
-        if len(bird_author_html) == 1:
-            ### O nome do município sempre vai existir
-            bird_author = [bird_author_html.text, "N/A"]
-        else:
-            bird_author = []
-            for a in bird_author_html:
-                bird_author.append(a.text)
         
-        # Extrair link do perfil do autor
+        bird_author = []
+        for a in bird_author_html:
+            bird_author.append(a.text)
+        
+        ## Extrair link do perfil do autor
         all_bird_author_href = author_div.findAll('a', class_="m-link")
-        ## Verificar se o link do perfil do autor existe
-        if len(all_bird_author_href) == 1:
-            ### O link do nome do município sempre vai existir
-            bird_author_href = [all_bird_author_href.get('href'), "N/A"]
-        else:
-            bird_author_href = []
-            for a in all_bird_author_href:
-                bird_author_href.append(a.get('href'))
+        
+        bird_author_href = []
+        for a in all_bird_author_href:
+            bird_author_href.append(a.get('href'))
 
         # Extrair data do registro
-        ## Verificar se a data do registro existe
-        if content_div.find('div', class_="date"):
-            bird_date = content_div.find('div', class_="date").text
-        else:
-            bird_date = "N/A"
+        bird_date = content_div.find('div', class_="date").text
 
         # Transformar cada registro em um objeto com os dados importantes
         bird_data = {
-            'm-portlet-href':'https://www.wikiaves.com.br' + a_href,
-            'm-portlet-img-src': img_src,
+            'register-link':'https://www.wikiaves.com.br' + a_href,
+            'register-img-src': img_src,
             'sp-link':'https://www.wikiaves.com.br' +  bird_name_href,
             'sp-name': bird_name[0],
             'sp-name-en': bird_name[1],
@@ -191,12 +187,12 @@ for municipio in lista_municipios:
             'author-name': bird_author[1],
             'city-link':'https://www.wikiaves.com.br' + bird_author_href[0],
             'author-profile-link':'https://www.wikiaves.com.br' + bird_author_href[1],
-            'date': bird_date
+            'register-date': bird_date
         }
 
         # Passar cada objeto para a lista 
         birds_list.append(bird_data)
-        
+
     ## Converter a lista em JSON
     json_string = json.dumps(birds_list, indent=4)
 
@@ -209,7 +205,8 @@ for municipio in lista_municipios:
     df_json = pd.read_json(f'birds{"_".join(municipio.lower().split())}.json')
     df_json.to_excel(f'birds{"_".join(municipio.lower().split())}.xlsx')
 
-    ## Esperar e recomeçar
-    time.sleep(2)
-
     print('✅ [Coleta finalizada] ' + municipio + ' com ' + str(len(birds)) + ' registros.')
+    ## print(f'✅ [Coleta finalizada]  {municipio}  com {str(len(birds))} {registros}.')
+
+    ## Esperar e recomeçar
+    time.sleep(5)
